@@ -1,0 +1,32 @@
+ANIMATIONS & RESPONSIVE
+   ========================================= */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+.reveal-left { opacity: 0; transform: translateX(-50px); transition: all 1s ease; }
+.reveal-right { opacity: 0; transform: translateX(50px); transition: all 1s ease; }
+.reveal-bottom { opacity: 0; transform: translateY(50px); transition: all 1s ease; }
+
+.active-anim { opacity: 1; transform: translate(0); }
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr 1fr; }
+    .portfolio-item.large { grid-column: span 2; }
+    .main-title { font-size: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Mobile menu implementation needed via JS */
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .portfolio-item, .portfolio-item.large { grid-column: auto; grid-row: auto; height: 300px; }
+    .experience-badge { right: 0; bottom: -20px; padding: 15px; }
+}
